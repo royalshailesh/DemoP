@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Priyanshi ✨</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Page 1: Kuchupuchu Apology -->
+        <div class="page active" id="page1">
+            <div class="page-content fade-in">
+                <h2 class="subtitle">FOR MY</h2>
+                <h1 class="title pink-gradient">KUCHUPUCHU ✧</h1>
+                <div class="text-content">
+                    <p class="cursive-text pink-text">I am</p>
+                    <div class="word-bubble">
+                        <span class="small-text">really</span>
+                    </div>
+                    <h1 class="big-sorry">SORRY</h1>
+                </div>
+                <p class="message">I made this specially just for you, for moments when<br>
+                you're mad. Take a deep breath, read slowly, and<br>
+                check <span class="pink-text">what I made for you 💗</span>.</p>
+                
+                <div class="hello-kitty-heart">
+                    <img src="Image (9).jpeg" alt="Hello Kitty" class="floating-image">
+                </div>
+                
+                <button class="next-btn" onclick="nextPage()">Next →</button>
+            </div>
+        </div>
+
+        <!-- Page 2: Fill the Heart Game -->
+        <div class="page" id="page2">
+            <div class="page-content fade-in">
+                <h2 class="game-title">Fill the heart to continue</h2>
+                
+                <div class="heart-grid">
+                    <div class="grid-cell" data-index="0">❌</div>
+                    <div class="grid-cell" data-index="1">❌</div>
+                    <div class="grid-cell" data-index="2">❌</div>
+                    <div class="grid-cell" data-index="3">❌</div>
+                    <div class="grid-cell center-cell" data-index="4">💗</div>
+                    <div class="grid-cell" data-index="5">❌</div>
+                    <div class="grid-cell" data-index="6">❌</div>
+                    <div class="grid-cell" data-index="7">❌</div>
+                    <div class="grid-cell" data-index="8">❌</div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn disabled" id="game-next" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 3: Letter -->
+        <div class="page" id="page3">
+            <div class="page-content fade-in">
+                <div class="letter-card">
+                    <h2 class="letter-header">A LETTER</h2>
+                    <h3 class="pink-cursive">FOR YOU ✧</h3>
+                    <p class="letter-salutation pink-cursive">My Dearest Pinak,</p>
+                    
+                    <div class="cute-cat-corner">
+                        <img src="https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif" alt="Cute cat" class="corner-cat">
+                    </div>
+                    
+                    <p class="letter-text">I'm sorry for the moments I hurt you. You mean<br>
+                    everything to me — and I just want your smile<br>
+                    back. 💗</p>
+                    
+                    <div class="love-stamp">
+                        <div class="stamp-circle">
+                            <span class="stamp-text">LOVE</span>
+                            <span class="stamp-heart">❤️</span>
+                            <span class="stamp-text-bottom">STAMPED</span>
+                        </div>
+                    </div>
+                    
+                    <p class="letter-signature">With all my love — Your Madam Ji 💗</p>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 4: Special Cards -->
+        <div class="page" id="page4">
+            <div class="page-content fade-in">
+                <div class="card-container">
+                    <h1 class="card-title">Special Cards</h1>
+                    <hr class="divider">
+                    
+                    <div class="card-header">
+                        <span class="card-from">FROM: Me</span>
+                        <span class="card-to">TO: Priyanshi</span>
+                    </div>
+                    
+                    <div class="special-card">
+                        <button class="carousel-btn left" onclick="prevCard()">‹</button>
+                        <div class="card-image">
+                            <img id="currentCard" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="For You">
+                            <p class="card-message">💐 Flowers For You</p>
+                        </div>
+                        <button class="carousel-btn right" onclick="nextCard()">›</button>
+                        <span class="heart-icon">💗</span>
+                    </div>
+                    
+                    <div class="card-footer">
+                        <p><strong>DATE:</strong> Now</p>
+                        <p><strong>VALID FOR:</strong> Forever</p>
+                        <p class="card-signature pink-cursive">with love, Your Madam Ji 💗</p>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 5: Songs Dedicated -->
+        <div class="page" id="page5">
+            <div class="page-content fade-in">
+                <h1 class="songs-title">Songs Dedicated To You 💗</h1>
+                
+                <div class="music-player">
+                    <div class="album-art">
+                        <img src="https://media.giphy.com/media/L2z7dnOduqEow/giphy.gif" alt="Hello Kitty">
+                    </div>
+                    
+                    <div class="song-info">
+                        <p class="status">PAUSED</p>
+                        <h2 class="song-name">Dil Cheez Tujhe Dedi</h2>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <span class="time">0:00</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress"></div>
+                            <div class="progress-dot"></div>
+                        </div>
+                        <span class="time">0:17</span>
+                    </div>
+                    
+                    <div class="controls">
+                        <button class="control-btn" onclick="previousSong()">⏮</button>
+                        <button class="control-btn play-btn" onclick="togglePlay()">▶️</button>
+                        <button class="control-btn" onclick="nextSong()">⏭</button>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 6: Thank You -->
+        <div class="page" id="page6">
+            <div class="page-content fade-in">
+                <div class="thank-you-card">
+                    <p class="small-header">FOR MY LOVE ✧</p>
+                    
+                    <h1 class="thank-you-title pink-gradient">Thank You</h1>
+                    <h2 class="thank-you-subtitle">FOR BEING MINE 💗</h2>
+                    
+                    <p class="thank-you-text">I hope this little space made you smile.<br>
+                    You are my favorite part of every day — always 💗</p>
+                    
+                    <div class="thank-you-cat">
+                        <img src="https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif" alt="Thank You Cat">
+                        <span class="thank-you-label">Thank You</span>
+                    </div>
+                    
+                    <p class="made-with">made with 💗 and sparkles — forever yours</p>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 7: Reasons I Love You -->
+        <div class="page" id="page7">
+            <div class="page-content fade-in">
+                <h1 class="reasons-title">Reasons Why I Love You</h1>
+                <div class="hearts-container" id="heartsContainer"></div>
+                
+                <div class="reasons-grid">
+                    <div class="reason-card bounce-in" style="animation-delay: 0.1s">
+                        <span class="reason-emoji">😊</span>
+                        <p>Your smile makes my day</p>
+                    </div>
+                    <div class="reason-card bounce-in" style="animation-delay: 0.2s">
+                        <span class="reason-emoji">💕</span>
+                        <p>You understand me like no one else</p>
+                    </div>
+                    <div class="reason-card bounce-in" style="animation-delay: 0.3s">
+                        <span class="reason-emoji">🌟</span>
+                        <p>You make everything better</p>
+                    </div>
+                    <div class="reason-card bounce-in" style="animation-delay: 0.4s">
+                        <span class="reason-emoji">🎵</span>
+                        <p>Your laugh is my favorite sound</p>
+                    </div>
+                    <div class="reason-card bounce-in" style="animation-delay: 0.5s">
+                        <span class="reason-emoji">🌈</span>
+                        <p>You bring color to my life</p>
+                    </div>
+                    <div class="reason-card bounce-in" style="animation-delay: 0.6s">
+                        <span class="reason-emoji">✨</span>
+                        <p>You're simply magical</p>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 8: You Are My Everything -->
+        <div class="page" id="page8">
+            <div class="page-content fade-in">
+                <div class="everything-container">
+                    <h1 class="everything-title">You Are My</h1>
+                    <div class="word-carousel">
+                        <span class="carousel-word active">EVERYTHING ✨</span>
+                        <span class="carousel-word">SUNSHINE ☀️</span>
+                        <span class="carousel-word">HAPPINESS 😊</span>
+                        <span class="carousel-word">WORLD 🌍</span>
+                        <span class="carousel-word">DREAM 💭</span>
+                        <span class="carousel-word">FOREVER 💕</span>
+                    </div>
+                    
+                    <div class="love-letter">
+                        <p>Dear Priyanshi,</p>
+                        <p>Every moment with you is a treasure. You've brought so much joy, love, and meaning into my life. When I'm with you, everything feels right.</p>
+                        <p>You're not just my girlfriend - you're my best friend, my confidant, my everything. I can't imagine my life without you.</p>
+                        <p>Thank you for being you. Thank you for loving me. Thank you for making every day an adventure.</p>
+                        <p class="signature">Forever Yours,<br>Your Madam Ji 💗</p>
+                    </div>
+                    
+                    <div class="floating-hearts-animation"></div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 9: Photo Gallery -->
+        <div class="page" id="page9">
+            <div class="page-content fade-in">
+                <h1 class="gallery-title">Our Moments Together 📸</h1>
+                
+                <div class="polaroid-gallery">
+                    <div class="polaroid" style="transform: rotate(-5deg);">
+                        <img src="https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif" alt="Memory 1">
+                        <p>Every moment with you</p>
+                    </div>
+                    <div class="polaroid" style="transform: rotate(3deg);">
+                        <img src="https://media.giphy.com/media/l0HlSMbTRLL4d5NFS/giphy.gif" alt="Memory 2">
+                        <p>Is a memory I treasure</p>
+                    </div>
+                    <div class="polaroid" style="transform: rotate(-3deg);">
+                        <img src="https://media.giphy.com/media/xUPGcJ2vEH1d5KZ2Wk/giphy.gif" alt="Memory 3">
+                        <p>Forever and always</p>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                    <button class="next-btn" onclick="nextPage()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page 10: Forever Yours -->
+        <div class="page" id="page10">
+            <div class="page-content fade-in">
+                <div class="final-page">
+                    <div class="sparkles">✨ ✨ ✨</div>
+                    <h1 class="final-title">I Love You</h1>
+                    <h2 class="final-name">Priyanshi</h2>
+                    <div class="heart-burst">
+                        💗 💕 💖 💗 💕 💖
+                    </div>
+                    
+                    <div class="final-message">
+                        <p>This is just the beginning of our story...</p>
+                        <p>I promise to make you smile every single day</p>
+                        <p>To be there for you always</p>
+                        <p>And to love you more with each passing moment</p>
+                    </div>
+                    
+                    <div class="infinity-symbol">
+                        <p>∞</p>
+                        <span>Forever Yours</span>
+                    </div>
+                    
+                    <button class="restart-btn" onclick="restartJourney()">♥️ Start Again ♥️</button>
+                </div>
+                
+                <div class="button-group">
+                    <button class="back-btn" onclick="prevPage()">← Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti container -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
